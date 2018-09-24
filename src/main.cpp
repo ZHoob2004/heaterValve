@@ -1,11 +1,5 @@
 #include <Arduino.h>
 
-
-
-
-
-
-
 // Tuning variables - these all need to be adjusted for proper functionality
 const int knobRawMin = 0;
 const int knobRawMax = 1023;
@@ -18,11 +12,10 @@ const int closeTimeAt14V = 3000;   // time in milliseconds for valve to complete
 
 
 // pin settings
-const int valvePin = 2;       // controls motor ground for valve. needed for all movement
-const int relayPin = 3;       // triggers motor reverse relay - ON = close valve
-const int knobRawPin = A0;    // potentiometer input for dash knob
-const int vBattRawPin = A1;   // voltage divider input for time adjustment
-
+const int valvePin = 0;       // controls motor ground for valve. needed for all movement
+const int relayPin = 1;       // triggers motor reverse relay - ON = close valve
+const int knobRawPin = A1;    // potentiometer input for dash knob
+const int vBattRawPin = A2;   // voltage divider input for time adjustment
 
 
 // Global variables and a few constants that shouldn't need adjustment
@@ -33,7 +26,6 @@ float vBatt = 0.0;            // current battery voltage. Refreshes every main l
 unsigned long t = 0;
 const float closeTimeM = (closeTimeAt14V-closeTimeAt10V)/(14.0-10.0);
 const float closeTimeB = closeTimeAt14V - closeTimeM*14.0;
-
 
 
 float getVBatt() {
