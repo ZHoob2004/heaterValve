@@ -1,0 +1,394 @@
+EESchema Schematic File Version 4
+LIBS:heaterValve-cache
+EELAYER 26 0
+EELAYER END
+$Descr A4 11693 8268
+encoding utf-8
+Sheet 1 1
+Title ""
+Date ""
+Rev ""
+Comp ""
+Comment1 ""
+Comment2 ""
+Comment3 ""
+Comment4 ""
+$EndDescr
+$Comp
+L dk_Embedded-Microcontrollers:ATTINY85-20PU U1
+U 1 1 5BA96447
+P 3000 3550
+F 0 "U1" H 3228 3553 60  0000 L CNN
+F 1 "ATTINY85-20PU" H 3228 3447 60  0000 L CNN
+F 2 "digikey-footprints:DIP-8_W7.62mm" H 3200 3750 60  0001 L CNN
+F 3 "http://www.microchip.com/mymicrochip/filehandler.aspx?ddocname=en589894" H 3200 3850 60  0001 L CNN
+F 4 "ATTINY85-20PU-ND" H 3200 3950 60  0001 L CNN "Digi-Key_PN"
+F 5 "ATTINY85-20PU" H 3200 4050 60  0001 L CNN "MPN"
+F 6 "Integrated Circuits (ICs)" H 3200 4150 60  0001 L CNN "Category"
+F 7 "Embedded - Microcontrollers" H 3200 4250 60  0001 L CNN "Family"
+F 8 "http://www.microchip.com/mymicrochip/filehandler.aspx?ddocname=en589894" H 3200 4350 60  0001 L CNN "DK_Datasheet_Link"
+F 9 "/product-detail/en/microchip-technology/ATTINY85-20PU/ATTINY85-20PU-ND/735469" H 3200 4450 60  0001 L CNN "DK_Detail_Page"
+F 10 "IC MCU 8BIT 8KB FLASH 8DIP" H 3200 4550 60  0001 L CNN "Description"
+F 11 "Microchip Technology" H 3200 4650 60  0001 L CNN "Manufacturer"
+F 12 "Active" H 3200 4750 60  0001 L CNN "Status"
+	1    3000 3550
+	1    0    0    -1  
+$EndComp
+$Comp
+L Regulator_Linear:L7805 U2
+U 1 1 5BA96614
+P 4100 1250
+F 0 "U2" H 4100 1492 50  0000 C CNN
+F 1 "L7805" H 4100 1401 50  0000 C CNN
+F 2 "" H 4125 1100 50  0001 L CIN
+F 3 "http://www.st.com/content/ccc/resource/technical/document/datasheet/41/4f/b3/b0/12/d4/47/88/CD00000444.pdf/files/CD00000444.pdf/jcr:content/translations/en.CD00000444.pdf" H 4100 1200 50  0001 C CNN
+	1    4100 1250
+	1    0    0    -1  
+$EndComp
+$Comp
+L Transistor_FET:IRF540N Q1
+U 1 1 5BA96886
+P 5150 2600
+F 0 "Q1" H 5355 2646 50  0000 L CNN
+F 1 "IRF540N" H 5355 2555 50  0000 L CNN
+F 2 "Package_TO_SOT_THT:TO-220-3_Vertical" H 5400 2525 50  0001 L CIN
+F 3 "http://www.irf.com/product-info/datasheets/data/irf540n.pdf" H 5150 2600 50  0001 L CNN
+	1    5150 2600
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:R R3
+U 1 1 5BA96B8A
+P 5000 2900
+F 0 "R3" V 5207 2900 50  0000 C CNN
+F 1 "10k" V 5116 2900 50  0000 C CNN
+F 2 "" V 4930 2900 50  0001 C CNN
+F 3 "~" H 5000 2900 50  0001 C CNN
+	1    5000 2900
+	0    -1   -1   0   
+$EndComp
+$Comp
+L Device:R R2
+U 1 1 5BA96BDC
+P 2900 2000
+F 0 "R2" H 2970 2046 50  0000 L CNN
+F 1 "10k" H 2970 1955 50  0000 L CNN
+F 2 "" V 2830 2000 50  0001 C CNN
+F 3 "~" H 2900 2000 50  0001 C CNN
+	1    2900 2000
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:R R1
+U 1 1 5BA96C04
+P 2900 1500
+F 0 "R1" H 2970 1546 50  0000 L CNN
+F 1 "22k" H 2970 1455 50  0000 L CNN
+F 2 "" V 2830 1500 50  0001 C CNN
+F 3 "~" H 2900 1500 50  0001 C CNN
+	1    2900 1500
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR010
+U 1 1 5BA96CF4
+P 6900 2200
+F 0 "#PWR010" H 6900 1950 50  0001 C CNN
+F 1 "GND" H 6905 2027 50  0000 C CNN
+F 2 "" H 6900 2200 50  0001 C CNN
+F 3 "" H 6900 2200 50  0001 C CNN
+	1    6900 2200
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR04
+U 1 1 5BA96D18
+P 3100 4150
+F 0 "#PWR04" H 3100 3900 50  0001 C CNN
+F 1 "GND" H 3105 3977 50  0000 C CNN
+F 2 "" H 3100 4150 50  0001 C CNN
+F 3 "" H 3100 4150 50  0001 C CNN
+	1    3100 4150
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR06
+U 1 1 5BA96D35
+P 4100 1650
+F 0 "#PWR06" H 4100 1400 50  0001 C CNN
+F 1 "GND" H 4105 1477 50  0000 C CNN
+F 2 "" H 4100 1650 50  0001 C CNN
+F 3 "" H 4100 1650 50  0001 C CNN
+	1    4100 1650
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:+12V #PWR013
+U 1 1 5BA96DA9
+P 7750 1950
+F 0 "#PWR013" H 7750 1800 50  0001 C CNN
+F 1 "+12V" H 7765 2123 50  0000 C CNN
+F 2 "" H 7750 1950 50  0001 C CNN
+F 3 "" H 7750 1950 50  0001 C CNN
+	1    7750 1950
+	-1   0    0    -1  
+$EndComp
+$Comp
+L power:+5V #PWR03
+U 1 1 5BA96E2B
+P 3100 3050
+F 0 "#PWR03" H 3100 2900 50  0001 C CNN
+F 1 "+5V" H 3115 3223 50  0000 C CNN
+F 2 "" H 3100 3050 50  0001 C CNN
+F 3 "" H 3100 3050 50  0001 C CNN
+	1    3100 3050
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	3100 3050 3100 3150
+Wire Wire Line
+	3100 4150 3100 4050
+Wire Wire Line
+	4100 1650 4100 1550
+Wire Wire Line
+	7750 1950 7750 2050
+Wire Wire Line
+	7750 2050 7850 2050
+Wire Wire Line
+	2900 1650 2900 1750
+$Comp
+L power:+12V #PWR01
+U 1 1 5BA97243
+P 2900 1250
+F 0 "#PWR01" H 2900 1100 50  0001 C CNN
+F 1 "+12V" H 2915 1423 50  0000 C CNN
+F 2 "" H 2900 1250 50  0001 C CNN
+F 3 "" H 2900 1250 50  0001 C CNN
+	1    2900 1250
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	2900 1250 2900 1350
+$Comp
+L power:GND #PWR02
+U 1 1 5BA972A4
+P 2900 2250
+F 0 "#PWR02" H 2900 2000 50  0001 C CNN
+F 1 "GND" H 2905 2077 50  0000 C CNN
+F 2 "" H 2900 2250 50  0001 C CNN
+F 3 "" H 2900 2250 50  0001 C CNN
+	1    2900 2250
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	2900 2150 2900 2250
+Text Label 3000 1750 0    50   ~ 0
+vBattSense
+Wire Wire Line
+	2900 1750 3000 1750
+Connection ~ 2900 1750
+Wire Wire Line
+	2900 1750 2900 1850
+Text Label 2250 3750 0    50   ~ 0
+vBattSense
+Wire Wire Line
+	5250 2800 5250 2900
+Wire Wire Line
+	5250 2900 5150 2900
+Wire Wire Line
+	4950 2600 4750 2600
+Wire Wire Line
+	4750 2600 4750 2900
+Wire Wire Line
+	4750 2900 4850 2900
+$Comp
+L power:GND #PWR08
+U 1 1 5BA97838
+P 5250 3000
+F 0 "#PWR08" H 5250 2750 50  0001 C CNN
+F 1 "GND" H 5255 2827 50  0000 C CNN
+F 2 "" H 5250 3000 50  0001 C CNN
+F 3 "" H 5250 3000 50  0001 C CNN
+	1    5250 3000
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	5250 2900 5250 3000
+Connection ~ 5250 2900
+Text Label 4500 2600 0    50   ~ 0
+valveRelayPin
+Wire Wire Line
+	4750 2600 4500 2600
+Connection ~ 4750 2600
+$Comp
+L Transistor_FET:IRF540N Q2
+U 1 1 5BA97FD0
+P 5150 3800
+F 0 "Q2" H 5355 3846 50  0000 L CNN
+F 1 "IRF540N" H 5355 3755 50  0000 L CNN
+F 2 "Package_TO_SOT_THT:TO-220-3_Vertical" H 5400 3725 50  0001 L CIN
+F 3 "http://www.irf.com/product-info/datasheets/data/irf540n.pdf" H 5150 3800 50  0001 L CNN
+	1    5150 3800
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:R R4
+U 1 1 5BA97FD6
+P 5000 4100
+F 0 "R4" V 5207 4100 50  0000 C CNN
+F 1 "10k" V 5116 4100 50  0000 C CNN
+F 2 "" V 4930 4100 50  0001 C CNN
+F 3 "~" H 5000 4100 50  0001 C CNN
+	1    5000 4100
+	0    -1   -1   0   
+$EndComp
+Wire Wire Line
+	5250 4000 5250 4100
+Wire Wire Line
+	5250 4100 5150 4100
+Wire Wire Line
+	4950 3800 4750 3800
+Wire Wire Line
+	4750 3800 4750 4100
+Wire Wire Line
+	4750 4100 4850 4100
+$Comp
+L power:GND #PWR09
+U 1 1 5BA97FE1
+P 5250 4200
+F 0 "#PWR09" H 5250 3950 50  0001 C CNN
+F 1 "GND" H 5255 4027 50  0000 C CNN
+F 2 "" H 5250 4200 50  0001 C CNN
+F 3 "" H 5250 4200 50  0001 C CNN
+	1    5250 4200
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	5250 4100 5250 4200
+Connection ~ 5250 4100
+Text Label 4500 3800 0    50   ~ 0
+valveGNDPin
+Wire Wire Line
+	4750 3800 4500 3800
+Connection ~ 4750 3800
+Text Label 2250 3350 0    50   ~ 0
+valveGNDPin
+Text Label 2250 3450 0    50   ~ 0
+valveRelayPin
+$Comp
+L power:+12V #PWR05
+U 1 1 5BA9828F
+P 3700 1150
+F 0 "#PWR05" H 3700 1000 50  0001 C CNN
+F 1 "+12V" H 3715 1323 50  0000 C CNN
+F 2 "" H 3700 1150 50  0001 C CNN
+F 3 "" H 3700 1150 50  0001 C CNN
+	1    3700 1150
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	3700 1150 3700 1250
+Wire Wire Line
+	3700 1250 3800 1250
+$Comp
+L power:+5V #PWR07
+U 1 1 5BA985A0
+P 4500 1150
+F 0 "#PWR07" H 4500 1000 50  0001 C CNN
+F 1 "+5V" H 4515 1323 50  0000 C CNN
+F 2 "" H 4500 1150 50  0001 C CNN
+F 3 "" H 4500 1150 50  0001 C CNN
+	1    4500 1150
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	4500 1150 4500 1250
+Wire Wire Line
+	4500 1250 4400 1250
+Wire Wire Line
+	5250 2400 5250 2250
+Text Label 2250 3550 0    50   ~ 0
+knobSense
+Wire Wire Line
+	2250 3350 2800 3350
+Wire Wire Line
+	2250 3450 2800 3450
+Wire Wire Line
+	2250 3550 2800 3550
+Wire Wire Line
+	2250 3750 2800 3750
+NoConn ~ 2800 3650
+NoConn ~ 2800 3850
+$Comp
+L Connector:Conn_01x08_Male J1
+U 1 1 5BA9C1B8
+P 8050 2350
+F 0 "J1" H 8023 2323 50  0000 R CNN
+F 1 "Conn_01x08_Male" H 8023 2232 50  0000 R CNN
+F 2 "" H 8050 2350 50  0001 C CNN
+F 3 "~" H 8050 2350 50  0001 C CNN
+	1    8050 2350
+	-1   0    0    -1  
+$EndComp
+Text Label 5600 2250 2    50   ~ 0
+valveRelay
+Text Label 5600 3550 2    50   ~ 0
+valveGND
+Wire Wire Line
+	5250 3600 5250 3550
+Wire Wire Line
+	5250 3550 5600 3550
+Wire Wire Line
+	5250 2250 5600 2250
+Text Label 7350 2350 0    50   ~ 0
+valveRelay
+Wire Wire Line
+	7350 2350 7850 2350
+Text Label 7350 2450 0    50   ~ 0
+valveGND
+Wire Wire Line
+	7350 2450 7850 2450
+Wire Wire Line
+	6900 2150 6900 2200
+$Comp
+L power:GND #PWR011
+U 1 1 5BAA3A4C
+P 7150 2800
+F 0 "#PWR011" H 7150 2550 50  0001 C CNN
+F 1 "GND" H 7155 2627 50  0000 C CNN
+F 2 "" H 7150 2800 50  0001 C CNN
+F 3 "" H 7150 2800 50  0001 C CNN
+	1    7150 2800
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	7150 2800 7150 2750
+Wire Wire Line
+	7150 2750 7850 2750
+Text Label 7350 2650 0    50   ~ 0
+knobSense
+Wire Wire Line
+	7350 2650 7850 2650
+$Comp
+L power:+5V #PWR012
+U 1 1 5BAA554B
+P 7200 2500
+F 0 "#PWR012" H 7200 2350 50  0001 C CNN
+F 1 "+5V" H 7215 2673 50  0000 C CNN
+F 2 "" H 7200 2500 50  0001 C CNN
+F 3 "" H 7200 2500 50  0001 C CNN
+	1    7200 2500
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	7200 2500 7200 2550
+Wire Wire Line
+	7200 2550 7850 2550
+Wire Wire Line
+	6900 2150 7850 2150
+Wire Wire Line
+	7750 2050 7750 2250
+Wire Wire Line
+	7750 2250 7850 2250
+Connection ~ 7750 2050
+$EndSCHEMATC
